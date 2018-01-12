@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <!--Headers for the Questions-->
+    <string name="Instructions">This app is intended to be used as an aid to study German spiritual vocabularies. Please refer to "Das Geheimnis des Menschlichen Lebens" for this quiz app.</string>
+    <string name="Question1">Question #1 - Fill in the blank(s):</string>
+    <string name="Question2">Question #2 - Pick your answer(s):</string>
+    <string name="Question3Instructions">Please use the diagram below for questions 3-7.</string>
+    <string name="Question3">Please fill in the blank for the word \"Incarnation\" in German.</string>
+    <string name="Incarnation">Incarnation</string>
+    <string name="Question4">Please fill in the blank for the word \"Crucifixion\" in German.</string>
+    <string name="Crucifixion">Crucifixion</string>
+    <string name="Question5">Please fill in the blank for the word \"Resurrection\" in German.</string>
+    <string name="Resurrection">Resurrection</string>
+    <string name="Question6">Please fill in the blank for the word \"Ascension\" in German.</string>
+    <string name="Ascension">Ascension</string>
+    <string name="Question7">Please fill in the blank for the word \"Dispensing\" in German.</string>
+    <string name="Dispensing">Dispensing</string>
+</resources>
