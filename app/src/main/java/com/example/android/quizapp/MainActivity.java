@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroupQ1;
     public int correct = 0;
     public int wrong = 0;
+    CheckBox checkBoxQ2A1, checkBoxQ2A2, checkBoxQ2A3, checkBoxQ2A4;
+    public EditText incarnationTextBox;
+    public EditText crucifixionTextBox;
+    public EditText resurrectionTextBox;
+    public EditText ascensionTextBox;
 
     @Override
     // not sure what OnClickListener is
@@ -44,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.wrong);
         quantityTextView.setText("Wrong: " + score);
     }
+
+    // Actions for the submit button for question 1
 
     public void submitQ1(View view) {
         q1a1 = (RadioButton) findViewById(R.id.Q1A1);
@@ -74,18 +81,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), selection, Toast.LENGTH_LONG).show(); // print the value of the selection
             }
         });
-//        clearAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//        /* Clears all selected radio buttons to default */
-//                int correct = 0;
-//                int wrong = 0;
-//                radioGroupQ1.clearCheck();
-//                addCorrect(correct);
-//                addWrong(wrong);
-//            }
-//        });
     }
+
+    // Actions for the submit button for question 2
 
     public void submitQ2(View view) {
         CheckBox checkBoxQ2A1 = (CheckBox) findViewById(R.id.checkboxQ2A1);
@@ -109,11 +107,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Actions for the submit button for question 3
+
     public void submitQ3(View view) {
         EditText incarnationTextBox = (EditText) findViewById(R.id.incarnation_text);
         Editable incarnationText = incarnationTextBox.getText();
         String incarnationString = incarnationText.toString();
-//Log.v("MainActivity","IncarnationString is " + incarnationString);
+        Log.v("MainActivity","IncarnationString is " + incarnationString);
 
         if (incarnationString.trim().equalsIgnoreCase("die Fleischwerdung") || incarnationString.trim().equalsIgnoreCase("Fleischwerdung")) {
             TextView messageTextView = (TextView) findViewById(R.id.Q3_response);
@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    // Actions for the submit button for question 4
 
     public void submitQ4(View view) {
         EditText crucifixionTextBox = (EditText) findViewById(R.id.crucifixion_text);
@@ -147,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Actions for the submit button for question 5
+
     public void submitQ5(View view) {
         EditText resurrectionTextBox = (EditText) findViewById(R.id.resurrection_text);
         Editable resurrectionText = resurrectionTextBox.getText();
@@ -164,6 +168,8 @@ public class MainActivity extends AppCompatActivity {
             addWrong(wrong);
         }
     }
+
+    // Actions for the submit button for question 6
 
     public void submitQ6(View view) {
         EditText ascensionTextBox = (EditText) findViewById(R.id.ascension_text);
@@ -183,6 +189,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Actions for the submit button for question 7
+
     public void submitQ7(View view) {
         EditText dispensingTextBox = (EditText) findViewById(R.id.dispensing_text);
         Editable dispensingText = dispensingTextBox.getText();
@@ -201,13 +209,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // The onClear button isn't functioning correctly
+
     public void onClear(View view) {
         /* Clears all selected radio buttons to default */
-        int correct = 0;
-        int wrong = 0;
+        correct = 0;
+        wrong = 0;
         radioGroupQ1.clearCheck();
         addCorrect(correct);
         addWrong(wrong);
-//        CheckBox checkBoxQ2A1.setChecked(false);
+//        checkBoxQ2A1.setChecked(false);
+//        checkBoxQ2A2.setChecked(false);
+//        checkBoxQ2A3.setChecked(false);
+//        checkBoxQ2A4.setChecked(false);
+//        incarnationTextBox.setText("");
+//        crucifixionTextBox.setText("");
+//        resurrectionTextBox.setText("");
+//        ascensionTextBox.setText("");
     }
 }
