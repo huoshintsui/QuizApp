@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //declare the variables here and initialize the variables under onCreate
     RadioButton q1a1, q1a2, q1a3;
     Button submit;
     String selection;
@@ -26,13 +27,22 @@ public class MainActivity extends AppCompatActivity {
     public EditText crucifixionTextBox;
     public EditText resurrectionTextBox;
     public EditText ascensionTextBox;
+    public EditText dispensingTextBox;
 
     @Override
     // not sure what OnClickListener is
-    // not sure why the reset button not working
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        checkBoxQ2A1 = (CheckBox) findViewById(R.id.checkboxQ2A1);
+        checkBoxQ2A2 = (CheckBox) findViewById(R.id.checkboxQ2A2);
+        checkBoxQ2A3 = (CheckBox) findViewById(R.id.checkboxQ2A3);
+        checkBoxQ2A4 = (CheckBox) findViewById(R.id.checkboxQ2A4);
+        incarnationTextBox = (EditText) findViewById(R.id.incarnation_text);
+        crucifixionTextBox = (EditText) findViewById(R.id.crucifixion_text);
+        resurrectionTextBox = (EditText) findViewById(R.id.resurrection_text);
+        ascensionTextBox = (EditText) findViewById(R.id.ascension_text);
+        dispensingTextBox = (EditText) findViewById(R.id.dispensing_text);
     }
 
     private void displayMessage(String message) {
@@ -86,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 2
 
     public void submitQ2(View view) {
-        CheckBox checkBoxQ2A1 = (CheckBox) findViewById(R.id.checkboxQ2A1);
+//        checkBoxQ2A1 = (CheckBox) findViewById(R.id.checkboxQ2A1);
         boolean hasCheckBoxQ2A1 = checkBoxQ2A1.isChecked();
-        CheckBox checkBoxQ2A2 = (CheckBox) findViewById(R.id.checkboxQ2A2);
+//        checkBoxQ2A2 = (CheckBox) findViewById(R.id.checkboxQ2A2);
         boolean hasCheckBoxQ2A2 = checkBoxQ2A2.isChecked();
-        CheckBox checkBoxQ2A3 = (CheckBox) findViewById(R.id.checkboxQ2A3);
+//        checkBoxQ2A3 = (CheckBox) findViewById(R.id.checkboxQ2A3);
         boolean hasCheckBoxQ2A3 = checkBoxQ2A3.isChecked();
-        CheckBox checkBoxQ2A4 = (CheckBox) findViewById(R.id.checkboxQ2A4);
+//        checkBoxQ2A4 = (CheckBox) findViewById(R.id.checkboxQ2A4);
         boolean hasCheckBoxQ2A4 = checkBoxQ2A4.isChecked();
         if (hasCheckBoxQ2A1==false && hasCheckBoxQ2A2 && hasCheckBoxQ2A3 && hasCheckBoxQ2A4) {
             TextView messageTextView = (TextView) findViewById(R.id.Q2_response);
@@ -110,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 3
 
     public void submitQ3(View view) {
-        EditText incarnationTextBox = (EditText) findViewById(R.id.incarnation_text);
+//        incarnationTextBox = (EditText) findViewById(R.id.incarnation_text);
         Editable incarnationText = incarnationTextBox.getText();
         String incarnationString = incarnationText.toString();
         Log.v("MainActivity","IncarnationString is " + incarnationString);
@@ -132,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 4
 
     public void submitQ4(View view) {
-        EditText crucifixionTextBox = (EditText) findViewById(R.id.crucifixion_text);
+//        crucifixionTextBox = (EditText) findViewById(R.id.crucifixion_text);
         Editable crucifixionText = crucifixionTextBox.getText();
         String crucifixionString = crucifixionText.toString();
 
@@ -152,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 5
 
     public void submitQ5(View view) {
-        EditText resurrectionTextBox = (EditText) findViewById(R.id.resurrection_text);
+//        resurrectionTextBox = (EditText) findViewById(R.id.resurrection_text);
         Editable resurrectionText = resurrectionTextBox.getText();
         String resurrectionString = resurrectionText.toString();
 
@@ -172,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 6
 
     public void submitQ6(View view) {
-        EditText ascensionTextBox = (EditText) findViewById(R.id.ascension_text);
+//        ascensionTextBox = (EditText) findViewById(R.id.ascension_text);
         Editable ascensionText = ascensionTextBox.getText();
         String ascensionString = ascensionText.toString();
 
@@ -192,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
     // Actions for the submit button for question 7
 
     public void submitQ7(View view) {
-        EditText dispensingTextBox = (EditText) findViewById(R.id.dispensing_text);
+//        dispensingTextBox = (EditText) findViewById(R.id.dispensing_text);
         Editable dispensingText = dispensingTextBox.getText();
         String dispensingString = dispensingText.toString();
 
@@ -218,13 +228,23 @@ public class MainActivity extends AppCompatActivity {
         radioGroupQ1.clearCheck();
         addCorrect(correct);
         addWrong(wrong);
-//        checkBoxQ2A1.setChecked(false);
-//        checkBoxQ2A2.setChecked(false);
-//        checkBoxQ2A3.setChecked(false);
-//        checkBoxQ2A4.setChecked(false);
-//        incarnationTextBox.setText("");
-//        crucifixionTextBox.setText("");
-//        resurrectionTextBox.setText("");
-//        ascensionTextBox.setText("");
+//        checkBoxQ2A1 = (CheckBox) findViewById(R.id.checkboxQ2A1);
+//        checkBoxQ2A2 = (CheckBox) findViewById(R.id.checkboxQ2A2);
+//        checkBoxQ2A3 = (CheckBox) findViewById(R.id.checkboxQ2A3);
+//        checkBoxQ2A4 = (CheckBox) findViewById(R.id.checkboxQ2A4);
+        checkBoxQ2A1.setChecked(false);
+        checkBoxQ2A2.setChecked(false);
+        checkBoxQ2A3.setChecked(false);
+        checkBoxQ2A4.setChecked(false);
+//        incarnationTextBox = (EditText) findViewById(R.id.incarnation_text);
+//        crucifixionTextBox = (EditText) findViewById(R.id.crucifixion_text);
+//        resurrectionTextBox = (EditText) findViewById(R.id.resurrection_text);
+//        ascensionTextBox = (EditText) findViewById(R.id.ascension_text);
+//        dispensingTextBox = (EditText) findViewById(R.id.dispensing_text);
+        incarnationTextBox.setText("");
+        crucifixionTextBox.setText("");
+        resurrectionTextBox.setText("");
+        ascensionTextBox.setText("");
+        dispensingTextBox.setText("");
     }
 }
